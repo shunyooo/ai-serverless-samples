@@ -1,0 +1,40 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+    "name": "Existing Dockerfile",
+    "build": {
+        "context": "..",
+        "dockerfile": "../Dockerfile"
+    },
+    "runArgs": [
+        "--env-file",
+        ".env"
+    ],
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "postCreateCommand": "/bin/sh .devcontainer/postCreateCommand.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "charliermarsh.ruff",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "mutantdino.resourcemonitor",
+                "aaron-bond.better-comments",
+                "bungcip.better-toml",
+                "njpwerner.autodocstring",
+                "emeraldwalk.RunOnSave",
+                "ms-azuretools.vscode-docker",
+                "GitHub.copilot-chat",
+                "ms-vscode.makefile-tools",
+                "ptweir.python-string-sql",
+                "minodisk.bigquery-runner"
+            ]
+        }
+    }
+}
